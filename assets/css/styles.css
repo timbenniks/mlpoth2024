@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "conformity";
+  src: url("/fonts/conformity.normal-webfont.eot");
+  src:
+    url("/fonts/conformity.normal-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("/fonts/conformity.normal-webfont.woff2") format("woff2"),
+    url("/fonts/conformity.normal-webfont.woff") format("woff"),
+    url("/fonts/conformity.normal-webfont.ttf") format("truetype"),
+    url("/fonts/conformity.normal-webfont.svg#conformitynormal") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "typewriter";
+  src: url("/fonts/travelingtypewriter-webfont.eot");
+  src:
+    url("/fonts/travelingtypewriter-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("/fonts/travelingtypewriter-webfont.woff2") format("woff2"),
+    url("/fonts/travelingtypewriter-webfont.woff") format("woff"),
+    url("/fonts/travelingtypewriter-webfont.ttf") format("truetype"),
+    url("/fonts/travelingtypewriter-webfont.svg#traveling__typewriterregular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: typewriter, serif;
+}
+
+/*
+a:hover {
+  @apply underline;
+}
+ 
+.teaser {
+  @apply max-w-screen-2xl mx-auto text-center;
+
+  img {
+    @apply mx-auto mt-12 block max-w-3xl w-10/12;
+  }
+
+  h1 {
+    @apply text-base md:text-lg max-w-3xl w-11/12 mt-12 mx-auto;
+  }
+
+  address {
+    @apply md:hidden mb-14 not-italic underline;
+  }
+} */

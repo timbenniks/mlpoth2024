@@ -1,0 +1,21 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@unocss/nuxt": "^0.56.1",
+    "@unocss/preset-web-fonts": "^0.56.1",
+    "nuxt": "^3.7.3"
+  },
+  "dependencies": {
+    "@storyblok/nuxt": "^5.6.13"
+  }
+}
