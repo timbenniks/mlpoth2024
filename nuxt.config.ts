@@ -1,13 +1,19 @@
 
 export default defineNuxtConfig({
   devtools: { enabled: false },
-  modules: ['@unocss/nuxt', "@storyblok/nuxt"],
+  modules: ['@unocss/nuxt', '@storyblok/nuxt', '@nuxt/image'],
 
   storyblok: {
-    accessToken: "xmebRD8G9TXOrQwW8hg7igtt",
+    accessToken: 'xmebRD8G9TXOrQwW8hg7igtt',
     devtools: false,
     apiOptions: {
-      region: "eu"
+      region: 'eu'
+    }
+  },
+
+  image: {
+    storyblok: {
+      baseURL: 'https://a.storyblok.com'
     }
   },
 

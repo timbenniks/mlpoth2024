@@ -31,12 +31,15 @@ body {
   font-family: typewriter, serif;
 }
 
-/*
 a:hover {
-  @apply underline;
+  text-decoration: underline;
 }
- 
-.teaser {
+
+.prose li p {
+  margin: 0;
+}
+
+/*.teaser {
   @apply max-w-screen-2xl mx-auto text-center;
 
   img {

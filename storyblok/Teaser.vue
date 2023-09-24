@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 defineProps({ blok: Object });
 </script>
 
@@ -16,12 +16,34 @@ defineProps({ blok: Object });
         info@mylittleplaceonthehill.com
       </a>
     </address>
-    <h1 class="text-base md:text-lg max-w-3xl w-11/12 mt-12 mx-auto">
+    <h1 class="text-base md:text-lg max-w-3xl w-11/12 mt-12 mx-auto mb-24">
       {{ blok.headline }}
     </h1>
 
-    <polaroid />
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 gap-4 px-4 lg:px-0 max-w-5xl mx-auto"
+    >
+      <polaroid
+        :image="polaroid.image"
+        v-for="polaroid in blok.polaroids"
+        :key="polaroid._uid"
+      />
+    </div>
 
-    <pre>{{ blok }}</pre>
+    <ul
+      v-if="blok.icons"
+      class="my-8 flex flex-row space-x-4 justify-center max-w-xl mx-auto"
+    >
+      <li v-for="icon in blok.icons" :key="icon._uid">
+        <nuxt-link :to="icon.url.url" target="_blank">
+          <nuxt-img
+            provider="storyblok"
+            :src="icon.icon.filename"
+            :alt="icon.name"
+            width="40"
+          />
+        </nuxt-link>
+      </li>
+    </ul>
   </section>
 </template>

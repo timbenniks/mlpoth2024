@@ -1,11 +1,23 @@
+<script setup>
+defineProps({ image: Object });
+</script>
+
 <template>
-  <figure class="bg-white px-15 pb-50 shadow-xl">
-    <img
-      src="https://mylittleplaceonthehill.com/thumbs/home/img_0030-372x249-q100.jpg"
-      alt="pool"
-      class="block"
+  <figure class="bg-white pt-4 px-4 pb-14 shadow-xl text-right">
+    <NuxtImg
+      class="block w-full h-auto"
+      width="500"
+      :alt="image.alt"
+      provider="storyblok"
       loading="lazy"
+      :src="image.filename"
+      sizes="sm:100vw md:500px"
     />
-    <figcaption class="font-caption align-right">pool</figcaption>
+    <figcaption
+      v-if="image.alt"
+      class="relative top-4 right-3 text-2xl font-caption align-right"
+    >
+      {{ image.alt }}
+    </figcaption>
   </figure>
 </template>
