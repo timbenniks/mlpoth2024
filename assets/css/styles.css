@@ -38,19 +38,3 @@ a:hover {
 .prose li p {
   margin: 0;
 }
-
-/*.teaser {
-  @apply max-w-screen-2xl mx-auto text-center;
-
-  img {
-    @apply mx-auto mt-12 block max-w-3xl w-10/12;
-  }
-
-  h1 {
-    @apply text-base md:text-lg max-w-3xl w-11/12 mt-12 mx-auto;
-  }
-
-  address {
-    @apply md:hidden mb-14 not-italic underline;
-  }
-} */

@@ -3,7 +3,7 @@ defineProps({ image: Object });
 </script>
 
 <template>
-  <figure class="bg-white pt-4 px-4 pb-14 shadow-xl text-right">
+  <figure class="bg-white pt-4 px-4 pb-14 shadow-lg text-right mb-8">
     <NuxtImg
       class="block w-full h-auto"
       width="500"
