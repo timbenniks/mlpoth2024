@@ -45,13 +45,13 @@ if (props.blok.imageposition[0] === "below") {
         <div class="text-base prose xl:text-xl text-left" v-html="text" />
       </article>
 
-      <template v-if="blok.media[0].component === 'Polaroid'">
+      <template v-if="blok.media[0].component === 'polaroid'">
         <div class="md:w-140">
           <polaroid :image="blok.media[0].image" :class="polaroidspace" />
         </div>
       </template>
 
-      <template v-if="blok.media[0].component === 'Carousel'">
+      <template v-if="blok.media[0].component === 'carousel'">
         <div class="md:w-140" :class="polaroidspace">
           <carousel :polaroids="blok.media[0].polaroids" />
         </div>
