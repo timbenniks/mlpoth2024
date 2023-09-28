@@ -38,6 +38,7 @@ if (props.blok.imageposition[0] === "below") {
     class="mx-auto text-left mt-44 max-w-11/12"
     :class="offset"
     v-editable="blok"
+    :id="blok.navigation_title.replace(' ', '-').toLowerCase()"
   >
     <div class="flex" :class="imageposition">
       <article :class="copyspace" class="md:w-140">

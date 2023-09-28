@@ -1,21 +1,26 @@
-<script setup lang="ts">
-const story = await useStoryblok(
-  "home",
-  {
-    version: "draft",
-    resolve_relations: "rates-blok.rates, rates-blok.rates.season",
-  },
-  {
-    resolveRelations: ["rates-blok.rates", "rates-blok.rates.season"],
-    resolveLinks: "url",
-  }
-);
+<script setup>
+const story = await useStoryblok("home", {
+  version: "draft",
+});
 
-console.log(story.value);
+const menuItems = computed(() => {
+  const items = [];
+
+  story.value.content.body.forEach((blok) => {
+    if (blok.navigation) {
+      items.push({
+        name: blok.navigation_title,
+        id: blok.navigation_title.replace(" ", "-").toLowerCase(),
+      });
+    }
+  });
+
+  return items;
+});
 </script>
 
 <template>
-  <global-header />
+  <global-header :nav="menuItems" />
   <main class="max-w-screen-2xl mx-auto">
     <StoryblokComponent v-if="story" :blok="story.content" />
   </main>

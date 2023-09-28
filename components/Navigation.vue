@@ -1,3 +1,22 @@
+<script setup>
+defineProps({ nav: Array });
+
+function setActiveLink() {
+  document.querySelectorAll(".navigation a").forEach((link) => {
+    link.classList.remove("active");
+  });
+
+  document
+    .querySelector('.navigation a[href^="/' + window.location.hash + '"]')
+    .classList.add("active");
+}
+
+onMounted(() => {
+  window.addEventListener("hashchange", setActiveLink);
+  setActiveLink();
+});
+</script>
+
 <template>
   <button
     class="nav-toggle relative h-12 w-12 bg-white lg:hidden mt-6"
@@ -19,33 +38,10 @@
     </div>
   </button>
   <ul class="hidden lg:flex text-md space-x-12 navigation">
-    <li><a href="/#home" rel="noopener" title="Home">home</a></li>
-    <li>
-      <a href="/#little-info" rel="noopener" title="little info"
-        >little info
-      </a>
-    </li>
-    <li>
-      <a href="/#accomodation" rel="noopener" title="accommodation"
-        >accommodation
-      </a>
-    </li>
-    <li>
-      <a
-        href="/#location-directions"
-        rel="noopener"
-        title="location & directions"
-        >location & directions
-      </a>
-    </li>
-    <li><a href="/#rates" rel="noopener" title="rates">rates</a></li>
-    <li>
-      <a href="/#little-scrapbook" rel="noopener" title="little scrapbook"
-        >little scrapbook
-      </a>
-    </li>
-    <li>
-      <a href="/#contact-us" rel="noopener" title="contact us">contact us</a>
+    <li v-for="link in nav" :key="link.id">
+      <a :href="`/#${link.id}`" rel="noopener" :title="link.name">{{
+        link.name
+      }}</a>
     </li>
   </ul>
 </template>
@@ -65,5 +61,9 @@
 
 .nav-toggle.open .line-3 {
   @apply -rotate-45 translate-y-0;
+}
+
+.navigation a.active {
+  text-decoration: underline;
 }
 </style>

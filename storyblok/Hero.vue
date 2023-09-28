@@ -3,7 +3,11 @@ defineProps({ blok: Object });
 </script>
 
 <template>
-  <section class="max-w-screen-2xl mx-auto text-center" v-editable="blok">
+  <section
+    class="max-w-screen-2xl mx-auto text-center"
+    v-editable="blok"
+    :id="blok.navigation_title.replace(' ', '-').toLowerCase()"
+  >
     <img
       :src="blok.Logo.filename"
       :alt="blok.Logo.alt"
