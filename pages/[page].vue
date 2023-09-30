@@ -1,24 +1,8 @@
 <script setup>
-const story = await useStoryblok("home", {
+const route = useRoute();
+
+const story = await useStoryblok(route.params.page, {
   version: "draft",
-});
-
-const menuItems = computed(() => {
-  const items = [];
-
-  story.value.content.body.forEach((blok) => {
-    if (blok.navigation) {
-      items.push({
-        name: blok.navigation_title,
-        id: blok.navigation_title
-          .replace(" ", "-")
-          .replace("-& ", "-")
-          .toLowerCase(),
-      });
-    }
-  });
-
-  return items;
 });
 
 const { title, description, image } = story.value.content;
@@ -60,9 +44,28 @@ useJsonld({
 </script>
 
 <template>
-  <global-header :nav="menuItems" />
   <main class="max-w-screen-2xl mx-auto">
     <StoryblokComponent v-if="story" :blok="story.content" />
+
+    <div
+      v-if="route.params.page === 'route'"
+      class="max-w-screen-xl mx-auto justify-center mb-12"
+    >
+      <p class="mb-8">
+        <a class="underline" href="javascript:window.print()"
+          >Print this page</a
+        >
+      </p>
+
+      <iframe
+        width="800"
+        height="500"
+        frameborder="0"
+        style="border: 0"
+        loading="lazy"
+        src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAtlX42N7mhxN66SQlp_Oe9Hk5tnIaHDz0&origin=Cephalonia+International+Airport&destination=My+Little+Place+on+the+Hill+Spartia+Greece&mode=driving&units=metric&waypoints=Kourkoumelata"
+      ></iframe>
+    </div>
   </main>
   <background />
 </template>

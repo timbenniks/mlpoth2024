@@ -1,7 +1,7 @@
 
 export default defineNuxtConfig({
   devtools: { enabled: false },
-  modules: ['@unocss/nuxt', '@storyblok/nuxt', '@nuxt/image'],
+  modules: ['@unocss/nuxt', '@storyblok/nuxt', '@nuxt/image', 'nuxt-jsonld'],
 
   storyblok: {
     accessToken: 'xmebRD8G9TXOrQwW8hg7igtt',

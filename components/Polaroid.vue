@@ -7,17 +7,17 @@ defineProps({ image: Object });
     <NuxtImg
       class="block w-full h-auto"
       width="500"
-      :alt="image.alt"
+      :alt="image?.alt || ''"
       provider="storyblok"
       loading="lazy"
       :src="image.filename"
       sizes="sm:100vw md:500px"
     />
     <figcaption
-      v-if="image.alt"
+      v-if="image.alt || image.name"
       class="relative top-4 right-3 text-2xl font-caption align-right"
     >
-      {{ image.alt }}
+      {{ image.alt ? image.alt : image.name }}
     </figcaption>
   </figure>
 </template>

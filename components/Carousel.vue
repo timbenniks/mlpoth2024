@@ -1,13 +1,13 @@
 <script setup>
 import "vue3-carousel/dist/carousel.css";
-import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
+import { Carousel, Slide, Pagination } from "vue3-carousel";
 
 defineProps({ polaroids: Array });
 </script>
 <template>
-  <carousel :items-to-show="1">
-    <slide v-for="polaroid in polaroids" :key="slide">
-      <Polaroid :image="polaroid.image" />
+  <carousel :items-to-show="1" :wrap-around="true">
+    <slide v-for="polaroid in polaroids" :key="polaroid">
+      <Polaroid :image="polaroid" />
     </slide>
 
     <template #addons>

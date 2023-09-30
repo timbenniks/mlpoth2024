@@ -1,12 +1,19 @@
 <script setup>
-defineProps({ blok: Object });
+const props = defineProps({ blok: Object });
+
+const navId = computed(() => {
+  return props.blok.navigation_title
+    .replace(" ", "-")
+    .replace("-& ", "-")
+    .toLowerCase();
+});
 </script>
 
 <template>
   <section
     class="max-w-screen-2xl mx-auto text-center"
     v-editable="blok"
-    :id="blok.navigation_title.replace(' ', '-').toLowerCase()"
+    :id="navId"
   >
     <img
       :src="blok.Logo.filename"
@@ -28,18 +35,20 @@ defineProps({ blok: Object });
       class="grid grid-cols-1 md:grid-cols-2 gap-4 px-4 lg:px-0 max-w-5xl mx-auto"
     >
       <polaroid
-        :image="polaroid.image"
-        v-for="polaroid in blok.polaroids"
+        :image="polaroid"
+        v-for="polaroid in blok.images"
         :key="polaroid._uid"
       />
     </div>
-
     <ul
       v-if="blok.icons"
       class="my-8 flex flex-row space-x-4 justify-center max-w-xl mx-auto"
     >
       <li v-for="icon in blok.icons" :key="icon._uid">
-        <nuxt-link :to="icon.url.url" target="_blank">
+        <nuxt-link
+          :to="icon.url.url || `/${icon.url.cached_url}`"
+          target="_blank"
+        >
           <nuxt-img
             provider="storyblok"
             :src="icon.icon.filename"

@@ -12,17 +12,24 @@ function wordBreaks(copy) {
 
   return result;
 }
+
+const navId = computed(() => {
+  return props.blok.navigation_title
+    .replace(" ", "-")
+    .replace("-& ", "-")
+    .toLowerCase();
+});
 </script>
 
 <template>
   <section
-    class="mx-auto text-left mt-44 max-w-2xl md:justify-center"
+    class="mx-auto text-left mt-44 md:max-w-2xl md:justify-center max-w-11/12"
     v-editable="blok"
-    :id="blok.navigation_title.replace(' ', '-').toLowerCase()"
+    :id="navId"
   >
     <h3 class="text-3xl mb-2">{{ blok.title }}</h3>
 
-    <table class="w-full text-xl mb-12">
+    <table class="w-full text-xs md:text-xl mb-12">
       <thead>
         <tr>
           <th class="text-center" v-for="th in blok.table.thead">

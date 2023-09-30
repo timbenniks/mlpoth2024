@@ -29,6 +29,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -47,4 +48,8 @@ a:hover {
 
 .prose li p {
   margin: 0;
+}
+
+img {
+  display: block;
 }
