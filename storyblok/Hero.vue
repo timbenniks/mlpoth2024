@@ -57,6 +57,7 @@ const navId = computed(() => {
             :src="icon.icon.filename"
             :alt="icon.name"
             width="40"
+            height="40"
           />
         </nuxt-link>
       </li>
