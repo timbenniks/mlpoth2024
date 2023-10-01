@@ -34,7 +34,7 @@ useSeoMeta({
   ogTitle: title,
   description: description,
   ogDescription: description,
-  ogImage: image.filename,
+  ogImage: `${image.filename}/m/1200x0`,
   ogSiteName: "My Little Place On The Hill",
   ogType: "website",
   twitterCard: "summary_large_image",
@@ -56,7 +56,7 @@ useJsonld({
     postalCode: "28100",
   },
   telephone: "+30 6941529959",
-  image: image.filename,
+  image: `${image.filename}/m/1200x0`,
   starRating: {
     "@type": "Rating",
     ratingValue: "5",
