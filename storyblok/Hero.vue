@@ -67,6 +67,8 @@ const navId = computed(() => {
       class="mx-auto max-w-11/12"
       alt="Greek Mandatory Banner"
       loading="lazy"
+      width="601"
+      height="82"
     />
   </section>
 </template>
