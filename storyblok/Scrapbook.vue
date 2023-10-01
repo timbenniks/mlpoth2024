@@ -29,6 +29,10 @@ onMounted(() => {
     };
   }
 });
+
+function getImageDimenion(which, url) {
+  return url.split("/")[5].split("x")[which === "width" ? 0 : 1];
+}
 </script>
 
 <template>
@@ -49,8 +53,9 @@ onMounted(() => {
         >
           <NuxtImg
             class="page-image object-cover rounded-sm"
-            width="500"
-            alt=""
+            :width="getImageDimenion('width', image)"
+            :height="getImageDimenion('height', image)"
+            :alt="`Image ${index}`"
             provider="storyblok"
             loading="eager"
             :src="image"
