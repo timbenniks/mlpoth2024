@@ -3,6 +3,12 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   modules: ['@unocss/nuxt', '@storyblok/nuxt', '@nuxt/image', 'nuxt-jsonld'],
 
+  routeRules: {
+    '/': { isr: true },
+    '/greek': { isr: true },
+    '/route': { isr: true },
+  },
+
   storyblok: {
     accessToken: process.env.STORYBLOK_ACCESS_TOKEN,
     devtools: false,
