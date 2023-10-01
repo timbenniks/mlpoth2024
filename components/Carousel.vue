@@ -7,7 +7,7 @@ defineProps({ polaroids: Array });
 <template>
   <carousel :items-to-show="1" :wrap-around="true">
     <slide v-for="polaroid in polaroids" :key="polaroid">
-      <Polaroid :image="polaroid" />
+      <Polaroid :image="polaroid" loading="eager" />
     </slide>
 
     <template #addons>

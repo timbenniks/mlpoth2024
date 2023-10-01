@@ -23,6 +23,12 @@ const menuItems = computed(() => {
 
 const { title, description, image } = story.value.content;
 
+useHead({
+  htmlAttrs: {
+    lang: "en",
+  },
+});
+
 useSeoMeta({
   title: title,
   ogTitle: title,

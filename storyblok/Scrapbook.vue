@@ -52,7 +52,7 @@ onMounted(() => {
             width="500"
             alt=""
             provider="storyblok"
-            loading="lazy"
+            loading="eager"
             :src="image"
             sizes="sm:50vw md:600px"
           />

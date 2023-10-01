@@ -42,11 +42,17 @@ useJsonld({
   priceRange: "€170 - €400",
 });
 
+useHead({
+  htmlAttrs: {
+    lang: "en",
+  },
+});
+
 const runtimeConfig = useRuntimeConfig();
 </script>
 
 <template>
-  <main class="max-w-screen-2xl mx-auto">
+  <main class="max-w-11/12 mx-auto">
     <StoryblokComponent v-if="story" :blok="story.content" />
 
     <div
