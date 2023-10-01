@@ -2,7 +2,7 @@
 const route = useRoute();
 
 const story = await useStoryblok(route.params.page, {
-  version: "draft",
+  version: "published",
 });
 
 const { title, description, image } = story.value.content;
@@ -41,6 +41,8 @@ useJsonld({
   },
   priceRange: "€170 - €400",
 });
+
+const runtimeConfig = useRuntimeConfig();
 </script>
 
 <template>
@@ -63,7 +65,7 @@ useJsonld({
         frameborder="0"
         style="border: 0"
         loading="lazy"
-        src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyAtlX42N7mhxN66SQlp_Oe9Hk5tnIaHDz0&origin=Cephalonia+International+Airport&destination=My+Little+Place+on+the+Hill+Spartia+Greece&mode=driving&units=metric&waypoints=Kourkoumelata"
+        :src="`https://www.google.com/maps/embed/v1/directions?key=${runtimeConfig.public.google}&origin=Cephalonia+International+Airport&destination=My+Little+Place+on+the+Hill+Spartia+Greece&mode=driving&units=metric&waypoints=Kourkoumelata`"
       ></iframe>
     </div>
   </main>

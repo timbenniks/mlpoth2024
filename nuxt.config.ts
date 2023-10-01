@@ -4,10 +4,16 @@ export default defineNuxtConfig({
   modules: ['@unocss/nuxt', '@storyblok/nuxt', '@nuxt/image', 'nuxt-jsonld'],
 
   storyblok: {
-    accessToken: 'xmebRD8G9TXOrQwW8hg7igtt',
+    accessToken: process.env.STORYBLOK_ACCESS_TOKEN,
     devtools: false,
     apiOptions: {
       region: 'eu'
+    }
+  },
+
+  runtimeConfig: {
+    public: {
+      google: process.env.MAPS_API_KEY,
     }
   },
 

@@ -1,5 +1,6 @@
 <script setup>
 defineProps({ nav: Array });
+const open = ref(false);
 
 function setActiveLink() {
   document.querySelectorAll(".navigation a").forEach((link) => {
@@ -15,12 +16,17 @@ onMounted(() => {
   window.addEventListener("hashchange", setActiveLink);
   setActiveLink();
 });
+
+function toggle() {
+  open.value = !open.value;
+}
 </script>
 
 <template>
   <button
-    class="nav-toggle relative h-12 w-12 bg-white lg:hidden mt-6"
-    onclick="this.classList.toggle('open')"
+    class="nav-toggle relative h-12 w-12 bg-white lg:hidden"
+    :class="open ? 'open' : ''"
+    @click="toggle()"
   >
     <span class="sr-only">Open main menu</span>
     <div
@@ -37,30 +43,33 @@ onMounted(() => {
       ></span>
     </div>
   </button>
-  <ul class="hidden lg:flex text-md space-x-12 navigation">
+  <ul
+    class="ml-4 lg:ml-0 lg:flex text-md space-y-2 lg:space-y-0 lg:space-x-12 navigation"
+    :class="open ? 'block' : 'hidden'"
+  >
     <li v-for="link in nav" :key="link.id">
-      <a :href="`/#${link.id}`" rel="noopener" :title="link.name">{{
-        link.name
-      }}</a>
+      <a
+        :href="`/#${link.id}`"
+        rel="noopener"
+        :title="link.name"
+        @click="toggle()"
+        >{{ link.name }}</a
+      >
     </li>
   </ul>
 </template>
 
 <style lang="postcss" scoped>
-.nav-toggle.open + ul {
-  @apply block;
-}
-
 .nav-toggle.open .line-1 {
-  @apply rotate-45 translate-y-0;
+  transform: rotate(45deg) translateY(0px);
 }
 
 .nav-toggle.open .line-2 {
-  @apply opacity-0;
+  opacity: 0;
 }
 
 .nav-toggle.open .line-3 {
-  @apply -rotate-45 translate-y-0;
+  transform: rotate(-45deg) translateY(0px);
 }
 
 .navigation a.active {

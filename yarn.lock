@@ -3020,13 +3020,6 @@ flatted@^3.2.9:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.9.tgz#7eb4c67ca1ba34232ca9d2d93e9886e611ad7daf"
   integrity sha512-36yxDn5H7OFZQla0/jFJmbIKTdZAQHngCedGxiMmpNfEZM0sdEeT+WczLQrjK6D7o2aiyLYDnkw0R3JK0Qv1RQ==
 
-flipbook-vue@^1.0.0-beta.4:
-  version "1.0.0-beta.4"
-  resolved "https://registry.yarnpkg.com/flipbook-vue/-/flipbook-vue-1.0.0-beta.4.tgz#e272fe4af0216f691e028585902c72acf3895c7b"
-  integrity sha512-4FycLNWkxEpHUCk08s1g9q1G/r1S/r3GI7LCalwMtr4G7Y7IDgKbA9AF7AjDPFudny+Rqndw74SHKVnksSebCA==
-  dependencies:
-    rematrix "^0.7.2"
-
 follow-redirects@^1.14.9:
   version "1.15.3"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.3.tgz#fe2f3ef2690afce7e82ed0b44db08165b207123a"
@@ -4698,6 +4691,11 @@ pacote@^17.0.4:
     ssri "^10.0.0"
     tar "^6.1.11"
 
+page-flip@^2.0.7:
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/page-flip/-/page-flip-2.0.7.tgz#b6eaf9dac78fd1dceeb7cb4d0e2eeb203591ea1e"
+  integrity sha512-96lQFUUz7r/LZzEUZJ3yBIMEKU9+m8HMFDzTvTdD6P7Ag/wXINjp9n0W7b4wanwnDbQETo4uNUoL3zMqpFxwGA==
+
 parse-git-config@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/parse-git-config/-/parse-git-config-3.0.0.tgz#4a2de08c7b74a2555efa5ae94d40cd44302a6132"
@@ -5236,11 +5234,6 @@ redis-parser@^3.0.0:
   integrity sha512-DJnGAeenTdpMEH6uAJRK/uiyEIH9WVsUmoLwzudwGJUwZPp80PDBWPHXSAGNPwNvIXAbe7MSUB1zQFugFml66A==
   dependencies:
     redis-errors "^1.0.0"
-
-rematrix@^0.7.2:
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/rematrix/-/rematrix-0.7.2.tgz#09b59118a6b46fc054ff64b6992e4865f5569077"
-  integrity sha512-NYLmE17dX15eUPhngLMTKlRYwATxEhcRdn9LKtk/iOXHxDKglCZnD2MrMLKwLlB5FX8u9kF/9yMhlQJpeDcuPw==
 
 require-directory@^2.1.1:
   version "2.1.1"

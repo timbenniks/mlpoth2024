@@ -1,6 +1,6 @@
 <script setup>
 const story = await useStoryblok("home", {
-  version: "draft",
+  version: "published",
 });
 
 const menuItems = computed(() => {

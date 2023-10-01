@@ -40,6 +40,7 @@ const navId = computed(() => {
         :key="polaroid._uid"
       />
     </div>
+
     <ul
       v-if="blok.icons"
       class="my-8 flex flex-row space-x-4 justify-center max-w-xl mx-auto"
@@ -58,5 +59,12 @@ const navId = computed(() => {
         </nuxt-link>
       </li>
     </ul>
+
+    <img
+      v-if="blok.greek_banner"
+      :src="blok.greek_banner.filename"
+      class="mx-auto"
+      alt=""
+    />
   </section>
 </template>
