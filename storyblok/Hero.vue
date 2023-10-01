@@ -19,7 +19,8 @@ const navId = computed(() => {
       :src="blok.Logo.filename"
       :alt="blok.Logo.alt"
       loading="eager"
-      width="600"
+      width="1391"
+      height="298"
       class="mx-auto mt-12 block max-w-3xl w-10/12"
     />
     <address class="md:hidden mb-14 not-italic underline">
