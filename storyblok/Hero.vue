@@ -38,6 +38,7 @@ const navId = computed(() => {
         :image="polaroid"
         v-for="polaroid in blok.images"
         :key="polaroid._uid"
+        loading="eager"
       />
     </div>
 
@@ -64,7 +65,8 @@ const navId = computed(() => {
       v-if="blok.greek_banner"
       :src="blok.greek_banner.filename"
       class="mx-auto"
-      alt=""
+      alt="Greek Mandatory Banner"
+      loading="lazy"
     />
   </section>
 </template>
