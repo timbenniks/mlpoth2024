@@ -61,7 +61,7 @@ const navId = computed(() => {
       </li>
     </ul>
 
-    <img
+    <nuxt-img
       v-if="blok.greek_banner"
       :src="blok.greek_banner.filename"
       class="mx-auto max-w-11/12"
