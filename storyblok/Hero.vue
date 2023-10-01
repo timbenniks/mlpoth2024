@@ -64,7 +64,7 @@ const navId = computed(() => {
     <img
       v-if="blok.greek_banner"
       :src="blok.greek_banner.filename"
-      class="mx-auto"
+      class="mx-auto max-w-11/12"
       alt="Greek Mandatory Banner"
       loading="lazy"
     />
