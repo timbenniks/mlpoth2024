@@ -5,8 +5,7 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/': { isr: true },
-    '/greek': { isr: true },
-    '/route': { isr: true },
+    '/*': { isr: true },
   },
 
   storyblok: {
