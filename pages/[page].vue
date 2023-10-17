@@ -2,7 +2,7 @@
 const route = useRoute();
 
 const story = await useStoryblok(route.params.page, {
-  version: "published",
+  version: "draft",
 });
 
 const { title, description, image } = story.value.content;
@@ -75,7 +75,6 @@ const runtimeConfig = useRuntimeConfig();
       ></iframe>
     </div>
   </main>
-  <background />
 </template>
 
 <style>

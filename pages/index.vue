@@ -1,6 +1,6 @@
 <script setup>
 const story = await useStoryblok("home", {
-  version: "published",
+  version: "draft",
 });
 
 const menuItems = computed(() => {
@@ -70,7 +70,6 @@ useJsonld({
   <main class="max-w-screen-2xl mx-auto">
     <StoryblokComponent v-if="story" :blok="story.content" />
   </main>
-  <background />
 </template>
 
 <style>

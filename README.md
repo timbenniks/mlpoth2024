@@ -4,16 +4,8 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 
 ## todo
 
-- ~~Mobile nav~~
-- ~~Greek page~~
-- ~~Route page~~
-- ~~Structured Data~~
 - prod setup
-- ~~Content~~
-  - ~~LITTLE INFO - images~~
-  - ~~ACCOMMODATION - images, layout~~
-  - ~~LOCATION & DIRECTIONS - copy, images, layout~~
-  - ~~SO....DIRECTIONS - copy, images, layout (not in nav)~~
-  - ~~RATES - layout~~
-  - ~~LITTLE SCRAPBOOK - new component (instagram?)~~
-  - ~~CONTACT US - copy, images, layout~~
+- transfer project to MLPOTH email
+- add CTA list with different button styles (black whit and alternative)
+- image bigger on large screen
+- make special offer page

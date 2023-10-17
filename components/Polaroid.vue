@@ -8,9 +8,11 @@ const dimensions = ref({
 </script>
 
 <template>
-  <figure class="bg-white pt-4 px-4 pb-14 shadow-lg text-right mb-8">
+  <figure
+    class="bg-white border-black border-1 pt-4 px-4 pb-14 text-right mb-8"
+  >
     <NuxtImg
-      class="block w-full h-auto"
+      class="block w-full h-auto border-black border-1"
       :width="dimensions.width"
       :height="dimensions.height"
       :alt="image?.alt || ''"
