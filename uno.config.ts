@@ -15,7 +15,6 @@ export default defineConfig({
       provider: 'none',
       fonts: {
         sans: ['typewriter', 'serif'],
-        caption: ['conformity', 'sans-serif'],
       },
     }),
   ],

@@ -23,7 +23,7 @@ const dimensions = ref({
     />
     <figcaption
       v-if="image.alt || image.name"
-      class="relative top-4 right-3 text-2xl font-caption align-right"
+      class="relative top-4 right-3 text-xl align-right"
     >
       {{ image.alt ? image.alt : image.name }}
     </figcaption>
