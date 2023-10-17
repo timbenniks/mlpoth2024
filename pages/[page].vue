@@ -53,6 +53,10 @@ const runtimeConfig = useRuntimeConfig();
 
 <template>
   <main class="max-w-11/12 mx-auto">
+    <p class="my-8">
+      <nuxt-link to="/" class="underline">&lt; back home</nuxt-link>
+    </p>
+
     <StoryblokComponent v-if="story" :blok="story.content" />
 
     <div

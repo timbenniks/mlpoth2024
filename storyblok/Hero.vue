@@ -24,9 +24,29 @@ const navId = computed(() => {
       class="mx-auto mt-12 block max-w-3xl w-10/12"
     />
 
-    <h1 class="text-base md:text-lg max-w-3xl w-11/12 mx-auto mb-24">
+    <h1 class="text-base md:text-lg max-w-3xl w-11/12 mx-auto mb-8">
       {{ blok.headline }}
     </h1>
+
+    <ul
+      v-if="blok.buttons"
+      class="mb-20 flex flex-row space-x-6 justify-center max-w-xl mx-auto"
+    >
+      <li v-for="button in blok.buttons" :key="button._uid">
+        <nuxt-link
+          :to="button.url.url || `/${button.url.cached_url}`"
+          target="_blank"
+          class="px-4 py-2 border underline"
+          :class="
+            button.color === 'default'
+              ? 'bg-black text-white border-black hover:bg-white hover:text-black'
+              : 'bg-white text-black border-black hover:bg-black hover:text-white'
+          "
+        >
+          {{ button.name }}
+        </nuxt-link>
+      </li>
+    </ul>
 
     <div
       class="grid grid-cols-1 md:grid-cols-2 gap-4 px-4 lg:px-0 max-w-5xl mx-auto"
