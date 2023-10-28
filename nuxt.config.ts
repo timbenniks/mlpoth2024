@@ -19,6 +19,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       google: process.env.MAPS_API_KEY,
+      published_or_draft: process.env.PUBLISHED_OR_DRAFT
     }
   },
 

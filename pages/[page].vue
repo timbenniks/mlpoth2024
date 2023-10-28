@@ -1,8 +1,9 @@
 <script setup>
+const runtimeConfig = useRuntimeConfig();
 const route = useRoute();
 
 const story = await useStoryblok(route.params.page, {
-  version: "draft",
+  version: runtimeConfig.public.published_or_draft || "draft",
 });
 
 const { title, description, image } = story.value.content;
@@ -47,8 +48,6 @@ useHead({
     lang: "en",
   },
 });
-
-const runtimeConfig = useRuntimeConfig();
 </script>
 
 <template>

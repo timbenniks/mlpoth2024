@@ -1,6 +1,8 @@
 <script setup>
+const runtimeConfig = useRuntimeConfig();
+
 const story = await useStoryblok("home", {
-  version: "draft",
+  version: runtimeConfig.public.published_or_draft || "draft",
 });
 
 const menuItems = computed(() => {
