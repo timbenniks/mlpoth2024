@@ -4,8 +4,7 @@ export default defineNuxtConfig({
   modules: ['@unocss/nuxt', '@storyblok/nuxt', '@nuxt/image', 'nuxt-jsonld'],
 
   routeRules: {
-    '/': { isr: true },
-    '/*': { isr: true },
+    '/**': { isr: true }
   },
 
   storyblok: {
