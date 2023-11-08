@@ -44,13 +44,13 @@ const navId = computed(() => {
 
 <template>
   <section
-    class="mx-auto text-left mt-44 max-w-11/12"
+    class="mx-auto text-left mt-24 max-w-11/12 pt-18"
     v-editable="blok"
     :id="navId"
   >
     <div class="flex" :class="[imageposition, offset]">
       <article :class="copyspace" class="md:w-140">
-        <h3 class="text-3xl mb-2">{{ blok.Title }}</h3>
+        <h3 class="text-xl md:text-3xl mb-2">{{ blok.Title }}</h3>
         <div class="text-base prose xl:text-xl text-left" v-html="text" />
       </article>
 

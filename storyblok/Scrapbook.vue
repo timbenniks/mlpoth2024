@@ -37,11 +37,11 @@ function getImageDimenion(which, url) {
 
 <template>
   <section
-    class="mx-auto text-left mt-44 max-w-11/12"
+    class="mx-auto text-left mt-44 max-w-11/12 pt-18"
     v-editable="blok"
     :id="navId"
   >
-    <h3 class="text-3xl mb-4 text-center">{{ blok.title }}</h3>
+    <h3 class="text-xl md:text-3xl mb-4 text-left">{{ blok.title }}</h3>
 
     <div class="book">
       <div id="pages" class="pages">
