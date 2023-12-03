@@ -37,18 +37,25 @@ function getImageDimenion(which, url) {
 
 <template>
   <section
-    class="mx-auto text-left mt-44 max-w-11/12 pt-18"
+    class="mx-auto text-left mt-12 max-w-11/12 pt-18"
     v-editable="blok"
     :id="navId"
   >
     <h3 class="text-xl md:text-3xl mb-4 text-left">{{ blok.title }}</h3>
+    <p class="mb-2">Click the pages to browse</p>
 
-    <div class="book">
+    <div class="book relative">
+      <p class="absolute top-2/4 -translate-y-2/4 left-4">
+        Click the first<br />
+        page to open<br />
+        the book
+      </p>
       <div id="pages" class="pages">
         <div
           class="page"
           v-for="(image, index) in images"
           :key="image"
+          :class="index === 0 || index === 1 ? 'flipped' : ''"
           :style="index % 2 === 0 ? `z-index: ${images.length - index}` : ''"
         >
           <NuxtImg
@@ -68,11 +75,19 @@ function getImageDimenion(which, url) {
 </template>
 <style>
 .book {
-  --dwidth: 80vw;
-  --width: 40vw;
-  --height: 40vw;
+  --dwidth: 90vw;
+  --width: 45vw;
+  --height: 45vw;
 
   transition: opacity 0.4s 0.2s;
+}
+
+@media screen and (min-width: 675px) {
+  .book {
+    --dwidth: 80vw;
+    --width: 40vw;
+    --height: 40vw;
+  }
 }
 
 .page {
@@ -104,7 +119,6 @@ function getImageDimenion(which, url) {
   position: relative;
   transform-style: preserve-3d;
   backface-visibility: hidden;
-  border-radius: 10px;
 }
 
 .book .page {
@@ -121,7 +135,8 @@ function getImageDimenion(which, url) {
   transform-style: preserve-3d;
   cursor: pointer;
   user-select: none;
-  background-color: #ccc;
+  background-color: #fff;
+  border: 2px solid #000;
 }
 
 .book .page:before {
@@ -139,7 +154,6 @@ function getImageDimenion(which, url) {
   pointer-events: all;
   transform: rotateY(0deg);
   right: 0;
-  border-radius: 0 10px 10px 0;
 }
 
 .book .page:nth-child(odd):hover {
@@ -159,7 +173,7 @@ function getImageDimenion(which, url) {
   transform: rotateY(180deg);
   transform-origin: 100% 0;
   left: 0;
-  border-radius: 10px 0 0 10px;
+
   border-color: black;
 }
 

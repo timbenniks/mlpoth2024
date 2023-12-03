@@ -7,7 +7,7 @@ function wordBreaks(copy) {
   let result = lines[0];
 
   if (lines[1]) {
-    result = `${lines[0]}<br /><span class="text-xs">${lines[1]}</span>`;
+    result = `${lines[0]}<br /><span class="text-xs md:text-lg">${lines[1]}</span>`;
   }
 
   return result;
@@ -23,15 +23,15 @@ const navId = computed(() => {
 
 <template>
   <section
-    class="mx-auto text-left mt-44 md:max-w-2xl md:justify-center max-w-11/12 pt-18"
+    class="mx-auto text-left mt-12 md:max-w-4xl md:justify-center max-w-full pt-18"
     v-editable="blok"
     :id="navId"
   >
-    <div class="bg-black text-white p-8">
+    <div class="bg-black text-white p-2">
       <h3 class="text-xl md:text-3xl mb-2">{{ blok.title }}</h3>
       <p class="mb-4" v-if="blok.sub_title">{{ blok.sub_title }}</p>
 
-      <table class="w-full text-xs md:text-xl mb-12">
+      <table class="w-full text-md md:text-xl mb-12 font-[arial] md:font-sans">
         <thead>
           <tr>
             <th class="text-center" v-for="th in blok.table.thead">
@@ -42,7 +42,7 @@ const navId = computed(() => {
         <tbody>
           <tr
             v-for="(tr, index) in blok.table.tbody"
-            :class="index === 0 ? 'text-xs' : 'text-md'"
+            :class="index === 0 ? 'text-xs md:text-lg' : 'text-lg md:text-2xl'"
             class="text-center"
           >
             <td

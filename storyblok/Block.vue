@@ -44,7 +44,7 @@ const navId = computed(() => {
 
 <template>
   <section
-    class="mx-auto text-left mt-24 max-w-11/12 pt-18"
+    class="mx-auto text-left mt-12 max-w-11/12 pt-18"
     v-editable="blok"
     :id="navId"
   >
