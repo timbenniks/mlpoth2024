@@ -1,4 +1,3 @@
-
 export default defineNuxtConfig({
   devtools: { enabled: false },
   modules: ['@unocss/nuxt', '@storyblok/nuxt', '@nuxt/image', 'nuxt-jsonld'],
@@ -35,4 +34,6 @@ export default defineNuxtConfig({
   unocss: {
     preflight: true,
   },
+
+  compatibilityDate: '2024-09-19',
 })
