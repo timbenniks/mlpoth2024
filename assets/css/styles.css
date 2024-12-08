@@ -15,8 +15,7 @@
 @font-face {
   font-family: "typewriter";
   src: url("/fonts/travelingtypewriter-webfont.eot");
-  src:
-    url("/fonts/travelingtypewriter-webfont.eot?#iefix")
+  src: url("/fonts/travelingtypewriter-webfont.eot?#iefix")
       format("embedded-opentype"),
     url("/fonts/travelingtypewriter-webfont.woff2") format("woff2"),
     url("/fonts/travelingtypewriter-webfont.woff") format("woff"),
@@ -29,7 +28,7 @@
 
 html {
   scroll-behavior: smooth;
-  /* scroll-padding-top: 4rem; */
+  scroll-padding-top: 80px;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {

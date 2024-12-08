@@ -16,6 +16,8 @@
 
 7. Can we add a second photo underneath the photo for the little info (laptop screen) think it will look better as it is a long text (same size photos)
 
+   > I propose better text or no photo
+
 8. ~~Can we have only the rates with the black backdrop - therefore two different text blocks?~~
 
 9. ~~On the laptop the photos don’t move left to right, can they if they are clicked on?~~
@@ -25,11 +27,10 @@
     > Do that in the CMS
 
 11. Would like to add and eat + drink section (we can gain some space by removing directions from "location and directions" on the menu?)
-    > For directiosn I'd remove the image and just write text and give people the link to the special route page. Also, remove little scrapbook from the menu to gain space. Its not needed and peoepl will scroll by anyways.
 
-> Add eat + drink from the CMS.
+    > For directiosn I'd remove the image and just write text and give people the link to the special route page. Also, remove little scrapbook from the menu to gain space. Its not needed and peoepl will scroll by anyways. Add eat + drink from the CMS.
 
-12. Final big ask, can we have my little place on the hill as a permanent fixture on top of the page so that when you say open accommodation it says my little place on the hill above? (Like the hotel essencia website more on this below) on laptop and mobile?
+12. ~~Final big ask, can we have my little place on the hill as a permanent fixture on top of the page so that when you say open accommodation it says my little place on the hill above? (Like the hotel essencia website more on this below) on laptop and mobile?~~
 
 13. And most importantly, if you remember we want to introduce some movement (video) and then we had the idea of sthng moving across the page (instead of a video) (have a look at hotelesencia.com they are doing it) they have some elements moving in a very simple way, like a crab on their first page ( think its cute and funky) Could we perhaps have a small cat? Or a bird? Or both? :) think that would be sooo amazing
 

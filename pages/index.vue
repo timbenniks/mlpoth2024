@@ -68,7 +68,7 @@ useJsonld({
 </script>
 
 <template>
-  <global-header :nav="menuItems" />
+  <global-header :nav="menuItems" :logo="story.content.navigation_logo" />
   <main class="max-w-screen-2xl mx-auto">
     <StoryblokComponent v-if="story" :blok="story.content" />
   </main>
