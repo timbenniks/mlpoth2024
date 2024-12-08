@@ -37,14 +37,14 @@ function getImageDimenion(which, url) {
 
 <template>
   <section
-    class="mx-auto text-left mt-12 max-w-11/12 pt-18"
+    class="mx-auto mt-12 md:max-w-4xl md:justify-center max-w-11/12 pt-18"
     v-editable="blok"
     :id="navId"
   >
     <h3 class="text-xl md:text-3xl mb-4 text-left">{{ blok.title }}</h3>
-    <p class="mb-2">Click the pages to browse</p>
+    <!-- <p class="mb-2">Click the pages to browse</p> -->
 
-    <div class="book relative">
+    <!-- <div class="book relative">
       <p class="absolute top-2/4 -translate-y-2/4 left-4">
         Click the first<br />
         page to open<br />
@@ -70,6 +70,21 @@ function getImageDimenion(which, url) {
           />
         </div>
       </div>
+    </div> -->
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <NuxtImg
+        v-for="(image, index) in images"
+        :key="image"
+        class="page-image object-cover rounded-sm"
+        :width="getImageDimenion('width', image)"
+        :height="getImageDimenion('width', image)"
+        :alt="`Image ${index}`"
+        provider="storyblok"
+        loading="eager"
+        :src="image"
+        sizes="sm:50vw md:600px"
+      />
     </div>
   </section>
 </template>

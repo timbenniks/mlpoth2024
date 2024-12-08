@@ -54,9 +54,9 @@ const navId = computed(() => {
           </tr>
         </tbody>
       </table>
-      <aside>
-        <div class="text-base prose text-md text-left" v-html="policy" />
-      </aside>
     </div>
+    <aside>
+      <div class="text-base prose text-md text-left" v-html="policy" />
+    </aside>
   </section>
 </template>

@@ -21,7 +21,7 @@ const navId = computed(() => {
       loading="eager"
       width="1391"
       height="298"
-      class="mx-auto mt-12 block max-w-3xl w-10/12"
+      class="mx-auto mt-8 md:mt-12 block max-w-3xl w-10/12"
     />
 
     <h1 class="text-base md:text-lg max-w-3xl w-11/12 mx-auto mb-8">
@@ -30,7 +30,7 @@ const navId = computed(() => {
 
     <ul
       v-if="blok.buttons"
-      class="mb-20 flex flex-row space-x-6 justify-center max-w-xl mx-auto"
+      class="mb-8 md:mb-20 flex flex-row space-x-6 justify-center max-w-xl mx-auto"
     >
       <li v-for="button in blok.buttons" :key="button._uid">
         <nuxt-link

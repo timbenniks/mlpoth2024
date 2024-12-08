@@ -11,15 +11,15 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "@unocss/nuxt": "^0.62.4",
-    "@unocss/preset-typography": "^0.62.4",
-    "@unocss/preset-web-fonts": "^0.62.4",
-    "nuxt": "^3.13.2"
+    "@unocss/nuxt": "^0.65.1",
+    "@unocss/preset-typography": "^0.65.1",
+    "@unocss/preset-web-fonts": "^0.65.1",
+    "nuxt": "^3.14.1592"
   },
   "dependencies": {
-    "@nuxt/image": "1.8.0",
-    "@storyblok/nuxt": "^6.0.11",
-    "nuxt-jsonld": "^2.0.8",
-    "vue3-carousel": "^0.3.4"
+    "@nuxt/image": "^1.8.1",
+    "@storyblok/nuxt": "^6.2.0",
+    "nuxt-jsonld": "^2.1.0",
+    "vue3-carousel": "^0.8.1"
   }
 }

@@ -1,6 +1,6 @@
 <script setup>
 import "vue3-carousel/dist/carousel.css";
-import { Carousel, Slide, Pagination } from "vue3-carousel";
+import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 
 defineProps({ polaroids: Array });
 </script>
@@ -12,6 +12,7 @@ defineProps({ polaroids: Array });
 
     <template #addons>
       <pagination />
+      <Navigation />
     </template>
   </carousel>
 </template>
@@ -29,5 +30,22 @@ defineProps({ polaroids: Array });
 
 .carousel__pagination-button::after {
   border-radius: 100%;
+}
+
+.carousel__next,
+.carousel__prev {
+  top: 0;
+  height: calc(100% - 50px);
+  width: 50%;
+  transform: none;
+  pointer-events: none;
+
+  .carousel__icon {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    pointer-events: all;
+  }
 }
 </style>
