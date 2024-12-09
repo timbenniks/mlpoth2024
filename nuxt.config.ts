@@ -7,6 +7,8 @@ export default defineNuxtConfig({
     'nuxt-jsonld',
   ],
 
+  ssr: process.env.PREVIEW_MODE === 'true' ? false : true,
+
   routeRules: {
     '/**': { isr: true }
   },
@@ -14,6 +16,7 @@ export default defineNuxtConfig({
   storyblok: {
     accessToken: process.env.STORYBLOK_ACCESS_TOKEN,
     devtools: true,
+    bridge: process.env.PREVIEW_MODE === 'true' ? true : false,
     apiOptions: {
       region: 'eu'
     }
