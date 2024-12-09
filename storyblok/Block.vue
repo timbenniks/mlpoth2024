@@ -1,47 +1,60 @@
 <script setup>
 const props = defineProps({ blok: Object });
 const text = computed(() => renderRichText(props.blok.Text));
-const offset = ref("md:justify-center");
-const imageposition = ref("flex-col md:flex-row-reverse");
-const polaroidspace = ref("mr-0 self-center");
-const copyspace = ref("ml-0");
-const copywidth = ref("md:w-140");
 
-if (props.blok.offset === "left") {
-  offset.value =
-    props.blok.imageposition === "left" ? "md:justify-end" : "md:justify-start";
-}
+const imageposition = computed(() => {
+  if (props.blok.imageposition === "left") {
+    return `${
+      props.blok.image_first_mobile ? "flex-col-reverse" : "flex-col"
+    } md:flex-row-reverse`;
+  } else if (props.blok.imageposition === "right") {
+    return `${
+      props.blok.image_first_mobile ? "flex-col-reverse" : "flex-col"
+    }  md:flex-row`;
+  } else if (props.blok.imageposition === "below") {
+    return "flex-col flex-col items-center";
+  }
+  return "flex-col md:flex-row-reverse"; // default value
+});
 
-if (props.blok.offset === "right") {
-  offset.value =
-    props.blok.imageposition === "left" ? "md:justify-start" : "md:justify-end";
-}
+const polaroidspace = computed(() => {
+  if (props.blok.imageposition === "left") {
+    return "md:mr-12 md:self-start";
+  } else if (props.blok.imageposition === "right") {
+    return "md:mr-0 md:self-start";
+  } else if (props.blok.imageposition === "below") {
+    return "mt-12 mr-0 self-center";
+  }
+  return "mr-0 self-center"; // default value
+});
 
-if (props.blok.imageposition === "left") {
-  imageposition.value = `${
-    props.blok.image_first_mobile ? "flex-col-reverse" : "flex-col"
-  } md:flex-row-reverse`;
-  polaroidspace.value = "md:mr-12 md:self-start";
-  copyspace.value = "md:ml-0";
-}
+const copyspace = computed(() => {
+  if (props.blok.imageposition === "left") {
+    return "md:ml-0";
+  } else if (props.blok.imageposition === "right") {
+    return "md:mr-12";
+  } else if (props.blok.imageposition === "below") {
+    return "ml-0";
+  }
+  return "ml-0"; // default value
+});
 
-if (props.blok.imageposition === "right") {
-  imageposition.value = `${
-    props.blok.image_first_mobile ? "flex-col-reverse" : "flex-col"
-  }  md:flex-row`;
-  polaroidspace.value = "md:mr-0 md:self-start";
-  copyspace.value = "md:mr-12";
-}
+const offset = computed(() => {
+  if (props.blok.offset === "left") {
+    return props.blok.imageposition === "left"
+      ? "md:justify-end"
+      : "md:justify-start";
+  } else if (props.blok.offset === "right") {
+    return props.blok.imageposition === "left"
+      ? "md:justify-start"
+      : "md:justify-end";
+  }
+  return "md:justify-center"; // default value
+});
 
-if (props.blok.imageposition === "below") {
-  imageposition.value = "flex-col flex-col items-center";
-  polaroidspace.value = "mt-12 mr-0 self-center";
-  copyspace.value = "ml-0";
-}
-
-if (!props.blok.media[0]) {
-  copywidth.value = "md:auto";
-}
+const copywidth = computed(() => {
+  return props.blok.media[0] ? "md:w-140" : "md:auto";
+});
 
 const navId = computed(() => {
   return props.blok.navigation_title
