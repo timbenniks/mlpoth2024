@@ -21,7 +21,7 @@ const navId = computed(() => {
       loading="eager"
       width="1391"
       height="298"
-      class="mx-auto mt-8 md:mt-12 block max-w-3xl w-10/12"
+      class="mx-auto block max-w-3xl w-10/12"
     />
 
     <h1 class="text-base md:text-lg max-w-3xl w-11/12 mx-auto mb-8">

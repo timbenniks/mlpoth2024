@@ -7,9 +7,11 @@ function setActiveLink() {
     link.classList.remove("active");
   });
 
-  document
-    .querySelector('.navigation a[href^="/' + window.location.hash + '"]')
-    .classList.add("active");
+  const activeLink = document.querySelector(
+    '.navigation a[href^="/' + window.location.hash + '"]'
+  );
+
+  activeLink && activeLink.classList.add("active");
 }
 
 onMounted(() => {

@@ -14,7 +14,7 @@ export default defineConfig({
     presetWebFonts({
       provider: 'none',
       fonts: {
-        sans: ['typewriter', 'serif'],
+        sans: ['bianco-sans', 'serif'],
       },
     }),
   ],

@@ -43,7 +43,7 @@ onUnmounted(() => {
         width="1391"
         height="298"
         fit="in"
-        class="block mx-auto w-72 py-2"
+        class="block mx-auto w-72 lg:w-96 py-2"
         :src="logo.filename"
         :alt="logo.alt"
       />

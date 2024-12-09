@@ -13,16 +13,26 @@
 } */
 
 @font-face {
-  font-family: "typewriter";
-  src: url("/fonts/travelingtypewriter-webfont.eot");
-  src: url("/fonts/travelingtypewriter-webfont.eot?#iefix")
-      format("embedded-opentype"),
-    url("/fonts/travelingtypewriter-webfont.woff2") format("woff2"),
-    url("/fonts/travelingtypewriter-webfont.woff") format("woff"),
-    url("/fonts/travelingtypewriter-webfont.ttf") format("truetype"),
-    url("/fonts/travelingtypewriter-webfont.svg#traveling__typewriterregular")
-      format("svg");
+  font-family: "bianco-sans";
+  src: url("/fonts/bianco-sans-7.eot");
+  src: url("/fonts/bianco-sans-7.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/bianco-sans-7.woff2") format("woff2"),
+    url("/fonts/bianco-sans-7.woff") format("woff"),
+    url("/fonts/bianco-sans-7.ttf") format("truetype"),
+    url("/fonts/bianco-sans-7.svg#BiancoSans-Regular") format("svg");
   font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "bianco-sans";
+  src: url("/fonts/bianco-sans-3.eot");
+  src: url("/fonts/bianco-sans-3.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/bianco-sans-3.woff2") format("woff2"),
+    url("/fonts/bianco-sans-3.woff") format("woff"),
+    url("/fonts/bianco-sans-3.ttf") format("truetype"),
+    url("/fonts/bianco-sans-3.svg#BiancoSans-ExtraBold") format("svg");
+  font-weight: bold;
   font-style: normal;
 }
 
@@ -38,7 +48,7 @@ html {
 }
 
 body {
-  font-family: typewriter, serif;
+  font-family: "bianco-sans", serif;
 }
 
 a:hover {
@@ -51,4 +61,10 @@ a:hover {
 
 img {
   display: block;
+}
+
+p a {
+  background: black;
+  color: white !important;
+  padding: 3px;
 }

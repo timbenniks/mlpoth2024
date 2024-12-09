@@ -1,5 +1,19 @@
 # My Little Place On The Hill
 
+- ~~use Bianco Sans font - alternative https://fonts.google.com/specimen/Red+Hat+Text~~
+- ~~scrapbook 3 in a row~~
+- ~~little info: break the list, add another block~~
+- ~~each block gets switch to put image first on mobile. Order in HTML.~~
+- ~~rates needs padding on mobile~~
+- ~~remove directions from location & directions~~
+- ~~move "so...directions" to location tab and remove block.~~
+- ~~on desktop make navigation logo bigger~~
+- ~~add eat and drink section~~
+
+- upload video in any place we have images. optimize with cloudinary.
+- add moving bird to any component
+- ability for walking cat on carousl or image
+
 1. ~~Mobile screen, Photo on first page, if it can be a bit further up so we can see all of it (for example on a iPhone 14 screen)~~
 
 2. ~~Mobile screen, To make smaller the distance between phone number and we found a neglected treasure~~

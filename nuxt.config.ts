@@ -1,6 +1,11 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
-  modules: ['@unocss/nuxt', '@storyblok/nuxt', '@nuxt/image', 'nuxt-jsonld'],
+  modules: [
+    '@unocss/nuxt',
+    '@storyblok/nuxt',
+    '@nuxt/image',
+    'nuxt-jsonld',
+  ],
 
   routeRules: {
     '/**': { isr: true }
