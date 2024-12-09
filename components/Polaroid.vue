@@ -1,5 +1,5 @@
 <script setup>
-const props = defineProps({ image: Object, loading: String });
+const props = defineProps({ image: Object, loading: String, cat: Boolean });
 
 const dimensions = ref({
   width: props.image.filename.split("/")[5].split("x")[0],
@@ -8,7 +8,11 @@ const dimensions = ref({
 </script>
 
 <template>
-  <figure class="bg-white text-right mb-8">
+  <figure class="bg-white text-right mb-8 relative">
+    <div
+      v-if="cat"
+      class="sprite cat1 absolute -top-[115px] -right-[140px]"
+    ></div>
     <NuxtImg
       class="block w-full h-auto"
       :width="dimensions.width"

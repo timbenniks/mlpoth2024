@@ -66,7 +66,7 @@ const navId = computed(() => {
 
 <template>
   <section
-    class="mx-auto text-left mt-12 max-w-11/12 pt-12"
+    class="mx-auto text-left mt-12 max-w-11/12 pt-12 relative"
     v-editable="blok"
     :id="navId"
   >
@@ -78,14 +78,34 @@ const navId = computed(() => {
         <div class="text-base prose xl:text-xl text-left" v-html="text" />
       </article>
 
-      <template v-if="blok.media[0] && blok.media[0].component === 'polaroid'">
+      <template
+        v-if="
+          blok.media[0] &&
+          blok.media[0].component === 'polaroid' &&
+          blok.media[0].image
+        "
+      >
         <div class="md:w-140">
+          <div
+            v-if="blok.cat"
+            class="sprite cat1 absolute -top-[115px] -right-[140px]"
+          ></div>
           <polaroid :image="blok.media[0].image" :class="polaroidspace" />
         </div>
       </template>
 
-      <template v-if="blok.media[0] && blok.media[0].component === 'carousel'">
-        <div class="md:w-140" :class="polaroidspace">
+      <template
+        v-if="
+          blok.media[0] &&
+          blok.media[0].component === 'carousel' &&
+          blok.media[0].images
+        "
+      >
+        <div class="md:w-140 relative" :class="polaroidspace">
+          <div
+            v-if="blok.cat"
+            class="sprite cat1 absolute -top-[115px] -right-[140px]"
+          ></div>
           <carousel :polaroids="blok.media[0].images" />
         </div>
       </template>

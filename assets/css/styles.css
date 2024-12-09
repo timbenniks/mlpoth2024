@@ -68,3 +68,80 @@ p a {
   color: white !important;
   padding: 3px;
 }
+
+.sprite {
+  width: 400px;
+  height: 200px;
+  background: url("/cats.png") no-repeat;
+  animation-timing-function: steps(1);
+  scale: 0.2;
+}
+
+.cat1 {
+  animation: cat1Animation 1.2s steps(12) infinite,
+    moveAndFlip 10s linear infinite;
+}
+
+@keyframes cat1Animation {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -2400px;
+  }
+}
+
+@keyframes moveAndFlip {
+  0%,
+  100% {
+    transform: translateX(0) scaleX(1);
+  }
+  49.99% {
+    transform: translateX(-1500px) scaleX(1);
+  }
+  50% {
+    transform: translateX(-1500px) scaleX(-1);
+  }
+  99.99% {
+    transform: translateX(0) scaleX(-1);
+  }
+}
+
+.cat2 {
+  animation: cat2Animation 0.6s steps(6) infinite;
+}
+
+@keyframes cat2Animation {
+  from {
+    background-position: -405px 0px;
+  }
+  to {
+    background-position: -405px -1200px;
+  }
+}
+
+.cat3 {
+  animation: cat3Animation 1.2s steps(12) infinite;
+}
+
+@keyframes cat3Animation {
+  from {
+    background-position: -810px -0px;
+  }
+  to {
+    background-position: -810px -2400px;
+  }
+}
+
+.cat4 {
+  animation: cat4Animation 1.3s steps(13) infinite;
+}
+
+@keyframes cat4Animation {
+  from {
+    background-position: -1215px 0px;
+  }
+  to {
+    background-position: -1215px -2600px;
+  }
+}

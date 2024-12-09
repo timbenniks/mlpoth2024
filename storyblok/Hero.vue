@@ -27,7 +27,6 @@ const navId = computed(() => {
     <h1 class="text-base md:text-lg max-w-3xl w-11/12 mx-auto mb-8">
       {{ blok.headline }}
     </h1>
-
     <ul
       v-if="blok.buttons"
       class="mb-8 md:mb-20 flex flex-row space-x-6 justify-center max-w-xl mx-auto"
@@ -53,9 +52,10 @@ const navId = computed(() => {
     >
       <polaroid
         :image="polaroid"
-        v-for="polaroid in blok.images"
+        v-for="(polaroid, index) in blok.images"
         :key="polaroid._uid"
         loading="eager"
+        :cat="index === 0 ? true : false"
       />
     </div>
 
